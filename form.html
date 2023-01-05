@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <video background-position = "center" background-size="cover" controls="controls">
+         
+        <source src="opening.mp4" type="video/mp4">
+    </video> -->
+
+    <div class="container">
+        <form id="Form1">
+            <h3>Create Account</h3>
+            <input type="text" id="email" placeholder="Email-johndoe@mail.com" required>
+            <input type="password" id="pass1" placeholder="Password" required>
+            <input type="password" id="pass2" placeholder="Confirm Password" required>
+            <div class="btn-box">
+                <button type="button" id="Next1">Next</button>
+            </div>
+        </form> 
+        
+        <form id="Form2">
+            <h3>Link a Location</h3>
+            <input type="text" id="Git" placeholder="Github" required>
+            <input type="text" id="Lin" placeholder="Linkedin" required>
+            <input type="text" id="Ins" placeholder="Instagram" required>
+            <div class="btn-box">
+                <button type="button" id="Back1">Back</button>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" id="Next2">Next</button>
+            </div>
+        </form>
+
+        <form id="Form3">
+            <h3>Personal Information</h3>
+            <input type="text" id="FN" placeholder="First Name" required>
+            <input type="text" id="LN" placeholder="Last Name" required>
+            <input type="text" id="MN" placeholder="Mobile Number" required>
+            <div class="btn-box">
+                <button type="button" id="Back2">Back</button>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="Submit" id="Submit">Submit</button>
+            </div>
+        </form>  
+        <div class="step-bro">
+            <div id="progress"></div>
+            <div class="step-sis"><small>Step1</small></div>
+            <div class="step-sis"><small>Step2</small></div>
+            <div class="step-sis"><small>Step3</small></div>
+        </div>      
+    </div>
+    
+<script>
+    //forms
+    var Form1 = document.getElementById("Form1");
+    var Form2 = document.getElementById("Form2");
+    var Form3 = document.getElementById("Form3");
+
+    //buttons
+    var Next1 = document.getElementById("Next1");
+    var Next2 = document.getElementById("Next2");
+    var Back1 = document.getElementById("Back1");
+    var Back2 = document.getElementById("Back2");
+
+
+    //form1
+    var email = document.getElementById("email").value;
+    console.log(email);
+    var pass1 = document.getElementById("email").value;
+    console.log(pass1);
+    var pass2 = document.getElementById("email").value;
+    console.log(pass2);
+
+    var email = document.getElementById("email");
+    console.log(email);
+
+    Next1.onclick = function(){
+ 
+        if(pass1.value==pass2.value)
+        {
+        Form1.style.left = "-450px";
+        Form2.style.left = "40px";
+        progress.style.width = "240px";
+        document.getElementById('Next1').disabled = true;
+        }
+        else
+        {
+            alert("Password must be same as before");
+        }
+    }
+
+    Back1.onclick = function(){
+        Form1.style.left = "40px";
+        Form2.style.left = "450px";
+        progress.style.width = "120px";
+    }
+
+    Next2.onclick = function(){
+        Form2.style.left = "-450px";
+        Form3.style.left = "40px";
+        progress.style.width = "360px";
+
+    }
+
+    Back2.onclick = function(){
+        Form2.style.left = "40px";
+        Form3.style.left = "450px";
+        progress.style.width = "240px";
+
+    }
+</script>
+    
+</body>
+</html>
