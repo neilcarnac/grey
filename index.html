@@ -16,19 +16,19 @@
     <div class="container">
         <form id="Form1">
             <h3>Create Account</h3>
-            <input type="text" id="email" placeholder="Email-johndoe@mail.com" required>
+            <input type="text" id="email" oninput="ValidateEmail()" placeholder="Email-johndoe@mail.com" required>
             <input type="password" id="pass1" placeholder="Password" required>
-            <input type="password" id="pass2" placeholder="Confirm Password" required>
+            <input type="password" id="pass2" oninput="Myfunction()" placeholder="Confirm Password" required>
             <div class="btn-box">
-                <button type="button" id="Next1" onclick= "Myfunction()" >Next</button>
+                <button type="button" id="Next1" onclick= "Myfunction() && ValidateEmail()" >Next</button>
             </div>
         </form> 
         
         <form id="Form2">
             <h3>Link a Location</h3>
-            <input type="text" id="Git" placeholder="Github" required>
-            <input type="text" id="Lin" placeholder="Linkedin" required>
-            <input type="text" id="Ins" placeholder="Instagram" required>
+            <input type="text" id="Git" oninput="isValidURL(git)" placeholder="Github" required>
+            <input type="text" id="Lin" oninput="isValidURL(lin)" placeholder="Linkedin" required>
+            <input type="text" id="Ins" oninput="isValidURL(ins)" placeholder="Instagram" required>
             <div class="btn-box">
                 <button type="button" id="Back1">Back</button>
                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" id="Next2">Next</button>
@@ -39,7 +39,7 @@
             <h3>Personal Information</h3>
             <input type="text" id="FN" placeholder="First Name" required>
             <input type="text" id="LN" placeholder="Last Name" required>
-            <input type="text" id="MN" placeholder="Mobile Number" required>
+            <input type="text" id="MN" oninput="Mob()" placeholder="Mobile Number" required>
             <div class="btn-box">
                 <button type="button" id="Back2">Back</button>
                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="Submit" id="Submit">Submit</button>
